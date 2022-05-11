@@ -13,7 +13,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('create-admin/', views.AdminUserCreateAPIView.as_view()),
     path('register/', views.UserCreateAPIView.as_view()),
-    path('result/', views.ResultListCreateAPIView.as_view()),
+    path('result/', views.dsadsadsadsa.as_view()),
     path('auth/', include('rest_framework.urls')),
     path('get-token/', obtain_auth_token),
     path('', include(router.urls))

@@ -58,3 +58,13 @@ class ResultListCreateAPIView(ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+
+
+class SomeListView(ListCreateAPIView):
+    queryset = Result.objects.all()
+    serializer_class = ResultSerializer
+    authentication_classes = [BasicAuthentication, ]
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
